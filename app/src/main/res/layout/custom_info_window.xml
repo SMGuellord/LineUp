@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="270sp"
+        android:layout_height="250sp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <ScrollView
+            android:layout_width="270sp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="280sp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:srcCompat="@drawable/logologo"
+                    android:paddingLeft="40sp"
+                    android:paddingRight="40sp"
+                    android:paddingStart="40sp"
+                    android:paddingEnd="40sp"
+                    android:paddingTop="10sp"
+                    android:paddingBottom="10sp"
+                    android:background="@color/Gray"/>
+
+                <TextView
+                    android:id="@+id/LocationExplaination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/questrial"
+                    android:text="Location"
+                    android:textColor="@color/Gray"
+                    android:textAlignment="center"
+                    />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/questrial"
+                    android:maxLines="1"
+                    android:paddingLeft="10sp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/Gray"/>
+
+                <TextView
+                    android:id="@+id/snippet"
+                    android:layout_width="250sp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="10"
+                    android:textColor="@color/Gray"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/questrial"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                 />
+
+                <TextView
+                    android:id="@+id/ClickToViewFurtherInformationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:fontFamily="@font/questrial"
+                    android:text="Click to view detailed statistics on the queue"
+                    android:paddingRight="10sp"
+                    android:paddingEnd="10sp"
+                    android:paddingStart="10sp"
+                    android:paddingLeft="10sp"
+                    android:layout_marginRight="10sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/brownGreen"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</LinearLayout>

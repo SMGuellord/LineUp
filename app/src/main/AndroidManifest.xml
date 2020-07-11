@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.minzint.a4queue">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAQ7X8xshBetgJ9hs61q1M9WTxT8hZ3_tI" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="java-lang-programming"
+                    android:scheme="android-app-google-plus-demo" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name=".registerActivity" />
+        <activity android:name=".User_Profile" />
+        <activity android:name=".Settings" />
+        <activity android:name=".Statistics" />
+        <activity android:name=".QueueInformation" />
+        <activity android:name=".SelectQueueLover" />
+        <activity android:name=".HelpDocumentation" />
+        <activity android:name=".QueueLover" />
+        <activity android:name=".QueueHater" />
+        <activity android:name=".SpecificHelpDocumentation" />
+        <activity android:name=".QueueLoverDescription" />
+        <activity
+            android:name=".InializeQueue"
+            android:noHistory="true" />
+        <activity android:name=".StepCounter" />
+        <activity
+            android:name=".Offline_Notify"
+            android:label="@string/title_activity_offline__notify"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".LimitedFunctionalityNotify" />
+        <activity
+            android:name=".NotificationWorker"
+            android:label="@string/title_activity_notification_worker"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".usermatches" />
+        <activity
+            android:name=".User_Match"
+            android:noHistory="true" />
+        <activity
+            android:name=".user_own_profile"
+            android:noHistory="true" />
+        <activity
+            android:name=".user_give_details"
+            android:noHistory="true" />
+        <activity
+            android:name=".match_details"
+            android:noHistory="true" />
+        <activity android:name=".Reactivate_account" />
+        <activity android:name=".Update_User_Details" />
+        <activity
+            android:name=".StartQueue"
+            android:noHistory="true" />
+        <activity
+            android:name=".QueueProgress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bookings"
+            android:label="@string/title_activity_bookings"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".match_details_active" />
+        <activity
+            android:name=".user_review"
+            android:label="@string/title_activity_user_review"
+            android:noHistory="true"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".automatch" />
+        android:theme="@style/AppTheme" />
+        <activity android:name=".FutureBookings" />
+        <activity android:name=".Future_Booking_desc" />
+        <activity
+            android:name=".help_introduction"
+            android:label="@string/title_activity_help_introduction"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".queue_end_details" />
+        <activity android:name=".user_reciepts" />
+        <activity android:name=".post_match_deetails" />
+        <activity android:name=".ReceiptDesc" />
+        <activity
+            android:name=".BrowseBookings"
+            android:noHistory="true" />
+        <activity
+            android:name=".FutureBookingMatchUser"
+            android:noHistory="true" />
+        <activity android:name=".GraphTesting" />
+        <activity android:name=".QueueDetails"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+
+    </application>
+
+</manifest>

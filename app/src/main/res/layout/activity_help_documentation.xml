@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layoutHelp"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    tools:context=".HelpDocumentation"
+    android:background="@drawable/black">
+
+    <!--Start Drawer Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/Gray"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:elevation="4dp"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"/>
+    <!--End Drawer Menu-->
+
+    <GridLayout
+        android:id="@+id/gridLayout3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/toolbar"
+        android:columnCount="1"
+        android:rowCount="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150sp">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:contentDescription="@string/help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/downarrow"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/TutorialHeading"
+            android:layout_width="match_parent"
+            android:layout_height="80sp"
+            android:paddingBottom="10sp"
+            android:paddingEnd="10sp"
+            android:paddingStart="10sp"
+            android:paddingTop="20sp"
+            android:text="@string/Tutorial"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15sp"
+                    android:background="@color/yellow"
+                    android:columnCount="1"
+                    android:rowCount="4"
+                    >
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:background="@color/yellow"
+                        >
+
+                        <ImageView
+                            android:id="@+id/MessengerSystemLinkImage"
+                            android:contentDescription="@string/MessengerSystemTutorial"
+                            android:layout_width="70sp"
+                            android:layout_height="70sp"
+                            android:layout_marginLeft="10sp"
+                            android:layout_marginStart="10sp"
+                            android:padding="5sp"
+                            app:srcCompat="@drawable/chat" />
+
+                        <TextView
+                            android:id="@+id/MessengerSystemLink"
+                            android:layout_width="200sp"
+                            android:layout_height="80sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="20sp"
+                            android:text="@string/MessengerSystemTutorial"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </GridLayout>
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:background="@color/lightYellow">
+
+                        <ImageView
+                            android:id="@+id/QueueStatisticsLinkImage"
+                            android:contentDescription="@string/QueueStatisticsTutorial"
+                            android:layout_width="80sp"
+                            android:layout_height="80sp"
+                            android:padding="5sp"
+                            app:srcCompat="@drawable/ic_statistics" />
+
+                        <TextView
+                            android:id="@+id/QueueStatisticsLink"
+                            android:layout_width="200sp"
+                            android:layout_height="80sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="20sp"
+                            android:text="@string/QueueStatisticsTutorial"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </GridLayout>
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:background="@color/yellow">
+
+                        <ImageView
+                            android:id="@+id/QueueLoverLinkImageTutorial"
+                            android:contentDescription="@string/queueLoverDescription"
+                            android:layout_width="80sp"
+                            android:layout_height="80sp"
+                            android:padding="5sp"
+                            app:srcCompat="@drawable/heart" />
+
+                        <TextView
+                            android:id="@+id/QueueLoverLinkTutorial"
+                            android:layout_width="200sp"
+                            android:layout_height="80sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="20sp"
+                            android:text="@string/queuelover"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </GridLayout>
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:columnCount="2"
+                        android:rowCount="1"
+                        android:background="@color/lightYellow">
+
+                        <ImageView
+                            android:id="@+id/QueueHaterLinkImageTutorial"
+                            android:contentDescription="@string/queuehater"
+                            android:layout_width="80sp"
+                            android:layout_height="80sp"
+                            android:padding="5sp"
+                            app:srcCompat="@drawable/cloud" />
+
+                        <TextView
+                            android:id="@+id/QueueHaterLinkTextTutorial"
+                            android:layout_width="200sp"
+                            android:layout_height="80sp"
+                            android:paddingBottom="10sp"
+                            android:paddingEnd="10sp"
+                            android:paddingStart="10sp"
+                            android:paddingTop="20sp"
+                            android:text="@string/queue_haters"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                    </GridLayout>
+
+
+                </GridLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="20sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </GridLayout>
+</android.support.v4.widget.DrawerLayout>

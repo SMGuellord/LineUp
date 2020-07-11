@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="1"
+    android:rowCount="5"
+    tools:context=".MainActivity"
+    android:background="@drawable/blackback"
+
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:contentDescription="@string/Logo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_column="0"
+        android:layout_marginTop="58dp"
+        app:srcCompat="@drawable/squarelogo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="26sp"
+            android:text="@string/reactivate_account"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:paddingEnd="20dp"
+        android:paddingStart="20dp">
+
+        <EditText
+            android:id="@+id/UserNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="52dp"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/username_icon"
+            android:drawableStart="@drawable/username_icon"
+            android:ems="10"
+            android:hint="@string/NameLink"
+            android:inputType="textPersonName"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/UserPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/UserNameEditText"
+            android:layout_alignStart="@+id/UserNameEditText"
+            android:layout_below="@+id/UserNameEditText"
+            android:layout_marginTop="33dp"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/userpassword_icon"
+            android:ems="10"
+            android:hint="@string/PasswordLink"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp"
+            android:drawableStart="@drawable/userpassword_icon" />
+
+        <EditText
+            android:id="@+id/ConfirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/UserPasswordEditText"
+            android:layout_alignStart="@+id/UserPasswordEditText"
+            android:layout_below="@+id/UserPasswordEditText"
+            android:layout_marginTop="33dp"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/userpassword_icon"
+            android:ems="10"
+            android:hint="@string/RetypePasswordLink"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="22sp"
+            android:drawableStart="@drawable/userpassword_icon" />
+
+        <Button
+            android:id="@+id/btnReactivate"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+
+
+            android:background="@drawable/buttonstyleithgradient"
+            android:text="@string/reactivate"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+</GridLayout>
+

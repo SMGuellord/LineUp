@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.minzint.a4queue.InializeQueue"
+    android:background="@drawable/blackback"
+    >
+
+    <!--Start Drawer Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/Gray"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+    <!--End Drawer Menu-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="35dp"
+                    app:srcCompat="@drawable/squarelogo"
+                    android:paddingTop="30sp"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/QueueNameInialize"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/imageView8"
+                    android:hint="@string/QueueInialize"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="20sp" />
+
+
+            </RelativeLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/yellow">
+
+                <ImageView
+                    android:id="@+id/QueueNameInializeImageEdit"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    app:srcCompat="@drawable/ic_settings"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/QueueNameInializeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/QueueInializeName"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp"
+                    />
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/lightYellow">
+
+                <ImageView
+                    android:id="@+id/QueueDescriptionInializeImage"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    app:srcCompat="@drawable/ic_settings"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/QueueDescriptionInialize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/QueueInializeDescription"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
+            </GridLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/yellow">
+
+                <ImageView
+                    android:id="@+id/QueueLengthInializeImage"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    app:srcCompat="@drawable/ic_settings"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/QueueLengthInialize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="30sp"
+                    android:paddingTop="10sp"
+                    android:text="@string/QueueInializeLength"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:paddingEnd="30sp" />
+
+                <TextView
+                    android:id="@+id/QueueLengthDistanceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/QueueDistanceTextInialize"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </GridLayout>
+
+            <SeekBar
+                android:id="@+id/seekBar2"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/yellow"
+                android:max="5"
+                android:paddingEnd="40sp"
+                android:paddingStart="40sp"
+                android:progress="3"
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/lightYellow">
+
+                <ImageView
+                    android:id="@+id/QueueNoPeopleInializeImage"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    app:srcCompat="@drawable/ic_settings"
+                    android:contentDescription="@string/todo" />
+
+                <TextView
+                    android:id="@+id/QueueNoPeopleInialize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="40sp"
+                    android:paddingTop="10sp"
+                    android:text="@string/QueueInializeNoPeople"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+
+                    android:paddingEnd="40sp" />
+
+                <TextView
+                    android:id="@+id/QueueNumberPeopleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/QueueNumberPeopleTextInialize"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </GridLayout>
+
+            <SeekBar
+                android:id="@+id/seekBar3"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/lightYellow"
+                android:max="5"
+
+                android:paddingEnd="40sp"
+                android:paddingStart="40sp"
+                android:progress="3"
+
+                />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp"
+                android:background="@color/yellow">
+
+                <ImageView
+                    android:id="@+id/QueueAdditionalInfoInializeImage"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"
+                    app:srcCompat="@drawable/ic_settings"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:id="@+id/QueueAdditionalInfoInialize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/QueueInializeAdditionalInfo"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
+            </GridLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30sp"
+                android:layout_marginStart="30sp"
+                android:background="@color/white"
+                android:text="@string/QueueInialize"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.v4.widget.DrawerLayout>

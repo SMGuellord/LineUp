@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@color/white"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/appIconIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12sp"
+            android:paddingBottom="2sp"
+            android:paddingTop="2sp"
+            android:src="@drawable/cloud" />
+
+        <TextView
+            android:id="@+id/aNametxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/appIconIV"
+            android:layout_toRightOf="@+id/appIconIV"
+            android:fontFamily="@font/questrial"
+            android:maxLines="1"
+            android:text="User name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/aVersiontxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/aNametxt"
+            android:layout_alignStart="@+id/aNametxt"
+            android:layout_below="@+id/aNametxt"
+            android:fontFamily="@font/questrial"
+            android:maxLines="1"
+            android:text="User bio"
+            android:textColor="@color/Gray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

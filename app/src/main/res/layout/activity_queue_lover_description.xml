@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layoutQueueLoverDesc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackback"
+    android:fitsSystemWindows="true"
+    tools:context=".QueueLoverDescription"
+    tools:openDrawer="start"
+
+    >
+
+
+    <!--Start Drawer Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/Gray"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" tools:targetApi="lollipop"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+    <!--End Drawer Menu-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+           >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/queueLoverDescription"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:columnCount="1"
+            android:rowCount="3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30sp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="173dp"
+                    android:background="@drawable/user"
+                    android:contentDescription="@string/UserName"
+                    android:id="@+id/imageView2" />
+
+                <TextView
+                    android:id="@+id/textViewUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/placename"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/editTextQueueLoverDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_marginTop="20sp"
+
+                android:ems="10"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:padding="8dp"
+                android:text="@string/description"
+                android:textSize="16sp"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                />
+
+
+            <Button
+                android:id="@+id/btnSelectQueueLover"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/yellow"
+                android:text="@string/SelectQueueLover"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+
+                android:layout_marginTop="20sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"/>
+        </GridLayout>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layoutProfile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".User_Profile"
+    tools:openDrawer="start">
+
+    <!--Start Drawer Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarProfile"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/Gray"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title=" ">
+
+            <ImageView
+                android:layout_width="140sp"
+                android:layout_height="65sp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                app:srcCompat="@drawable/smalllogo" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+    <!--End Drawer Menu-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".User_Profile">
+
+        <RelativeLayout
+
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:attr/actionBarSize"
+            android:layout_marginBottom="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/blackback"
+                    android:orientation="vertical">
+
+                    <!-- Start Profile Heading-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20sp"
+                            android:fontFamily="@font/electrolize"
+                            android:gravity="center"
+                            android:text="@string/my_profile"
+                            android:textColor="#fff"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20sp"
+                            android:fontFamily="@font/questrial"
+                            android:gravity="center"
+                            android:text="@string/manage_account"
+                            android:textColor="@color/light_gray"
+                            android:textSize="17sp" />
+
+                    </LinearLayout>
+
+                    <!-- End Profile Heading-->
+                    <!-- /////////////////////////////////////////////////////////////////-->
+
+                    <!-- Start User profile-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_margin="5dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_marginBottom="30sp"
+                            android:orientation="vertical">
+                            <!-- Profile image-->
+                            <ImageView
+                                android:id="@+id/profilePicture"
+                                android:layout_width="match_parent"
+                                android:layout_height="120dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:src="@drawable/profile_image" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="335dp"
+                            android:layout_marginTop="130dp"
+                            android:orientation="horizontal">
+
+                            <!-- Start user's details titles-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/textViewRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/rating"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/name"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/user_email"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/register_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/register_date"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- End user's details titles-->
+
+                            <!-- Start user's details values-->
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <!--<TextView
+                                    android:id="@+id/textViewRatingValue"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/rating_value"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold"
+                                    android:textSize="16sp"
+                                    android:paddingLeft="5dp"/>-->
+
+                                <RatingBar
+                                    android:id="@+id/simpleRatingBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="39dp"
+                                    android:layout_margin="0dp"
+                                    android:numStars="5"
+                                    android:scaleX="0.4"
+                                    android:scaleY="0.4" />
+
+                                <TextView
+                                    android:id="@+id/textViewNameValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="5dp"
+                                    android:paddingStart="5dp"
+                                    android:text="@string/name_value"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewEmailValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="5dp"
+                                    android:text="@string/email_value"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textViewRegisterDateValue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:fontFamily="@font/questrial"
+                                    android:paddingLeft="5dp"
+                                    android:text="@string/register_date_value"
+                                    android:textColor="#fff"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <!-- End user's details values-->
+
+                        </LinearLayout>
+
+                        <!-- End user Profile -->
+                        <!--/////////////////////////////////////////////////////////////////////////////-->
+
+                        <!-- Start Card view-->
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="280dp"
+                            app:cardBackgroundColor="@color/cardview_dark_background"
+                            tools:style="@style/CardView">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <!--<TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:gravity="center"
+                                        android:text="@string/my_active_bookings"
+                                        android:textColor="#fff"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />-->
+
+                                   <!-- <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/active_bookings_value"
+                                        android:textColor="@color/brownGreen"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />-->
+
+                                    <Button
+                                        android:id="@+id/btnBookings"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/buttonstyleithgradient"
+                                        android:text="@string/my_bookings"
+                                        android:textAllCaps="false"
+                                        android:textColor="#fff" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                   <!-- <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:gravity="center"
+                                        android:text="@string/my_active_services"
+                                        android:textColor="#fff"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold" />-->
+
+                                   <!-- <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/my_active_services_value"
+                                        android:textColor="@color/brownGreen"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />-->
+
+                                    <Button
+                                        android:id="@+id/btnServices"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/buttonstyleithgradient"
+                                        android:text="@string/my_services"
+                                        android:textAllCaps="false"
+                                        android:textColor="#fff" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <!--<TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:gravity="center"
+                                        android:text="@string/my_receipts"
+                                        android:textColor="#fff"
+                                        android:textSize="16sp"
+                                        android:textStyle="bold"
+                                        android:layout_marginBottom="14dp"/>-->
+
+                                   <!-- <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/questrial"
+                                        android:paddingTop="10dp"
+                                        android:text="@string/bookings_finished_value"
+                                        android:textColor="@color/brownGreen"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold" />-->
+
+                                    <Button
+                                        android:id="@+id/btnReceipts"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/buttonstyleithgradient"
+                                        android:fontFamily="@font/questrial"
+                                        android:text="@string/receipts"
+                                        android:textAllCaps="false"
+                                        android:textColor="#fff" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+                    </RelativeLayout>
+                    <!-- End Card view-->
+
+                    <!-- ///////////////////////////////////////////////////////////////////////////-->
+
+                    <!-- Start Account Statistics-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <!-- Start Account Statistics title-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:background="@color/cardview_dark_background"
+                                android:fontFamily="@font/questrial"
+                                android:paddingLeft="10dp"
+                                android:text="@string/account_statistics"
+                                android:textColor="#fff"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <!-- End Account Statistics title-->
+
+                        <!-- Start fields-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:weightSum="3">
+
+                            <!--Start total column titles-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/total"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/footsteps"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_queueing"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_saved"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/bookings_made"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/services_provided"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_made"
+                                    android:textColor="#fff" />
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_paid"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+                            <!--End total column titles-->
+
+                            <!--Start This past month column titles-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="0dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/this_past_month"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView_footsteps_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/footsteps_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_time_queueing_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_queueing_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_time_saved_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_saved_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_bookings_made_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/bookings_made_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_services_provided_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/services_provided_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_money_made_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_made_past_month"
+                                    android:textColor="#fff" />
+                                <TextView
+                                    android:id="@+id/textView_money_paid_past_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_made_past_month"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+                            <!--End this past month column titles-->
+
+                            <!--Start All time column titles-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/this_all_time"
+                                    android:textColor="#fff"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/textView_footsteps_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/footsteps_all_time"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_time_queueing_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_queueing_past_month"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_time_saved_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/time_saved_all_time"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_bookings_made_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/bookings_made_all_time"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_services_provided_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/services_provided_all_time"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_money_made_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_made_all_time"
+                                    android:textColor="#fff" />
+
+                                <TextView
+                                    android:id="@+id/textView_money_paid_all_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/questrial"
+                                    android:text="@string/money_made_all_time"
+                                    android:textColor="#fff" />
+
+                            </LinearLayout>
+                            <!--End All time column titles-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <Button
+                                android:id="@+id/btn_delete_account"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="50dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:background="@color/brightRed"
+                                android:fontFamily="@font/questrial"
+                                android:text="@string/delete_account"
+                                android:textAllCaps="false"
+                                android:textColor="#fff" />
+
+                            <Button
+                                android:id="@+id/btn_change_details"
+                                android:layout_width="110dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="10dp"
+                                android:layout_marginBottom="50dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_weight="1"
+                                android:background="@color/brownGreen"
+                                android:fontFamily="@font/questrial"
+                                android:text="@string/change_details"
+                                android:textAllCaps="false"
+                                android:textColor="#fff" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
+

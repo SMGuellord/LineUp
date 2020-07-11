@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".match_details"
+    android:background="@drawable/blackback">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginEnd="20sp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/MatchDetailsText"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:paddingTop="80sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/electrolize"
+                />
+
+            <TextView
+                android:id="@+id/matchDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/MatchDetailsTextA"
+                android:textAlignment="center"
+                android:textSize="17sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/questrial"
+
+                />
+
+            <TextView
+                android:id="@+id/userNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/UserNameText"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="17sp"
+                android:fontFamily="@font/questrial"/>
+
+            <TextView
+                android:id="@+id/userNameLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/questrial"
+                android:layout_marginTop="10sp"/>
+
+            <TextView
+                android:id="@+id/userLocationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="17sp"
+                android:fontFamily="@font/questrial"/>
+
+            <TextView
+                android:id="@+id/userLocationLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:paddingTop="15sp"
+                android:fontFamily="@font/questrial"
+                android:layout_marginTop="10sp"
+                />
+
+            <TextView
+                android:id="@+id/userTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time:"
+                android:textSize="17sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="20sp"
+                android:fontFamily="@font/questrial"/>
+
+            <TextView
+                android:id="@+id/userTimeLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/questrial"
+                android:layout_marginTop="10sp"
+                />
+
+            <TextView
+                android:id="@+id/userFeeAmountTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price:"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="17sp"
+                android:fontFamily="@font/questrial"
+                />
+
+
+            <TextView
+                android:id="@+id/UserFeeAmountLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fee"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/questrial"
+                android:layout_marginTop="10sp"
+                />
+
+            <TextView
+                android:id="@+id/userMessageTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message from the user:"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginTop="20sp"
+                android:textSize="17sp"
+                android:fontFamily="@font/questrial"
+                />
+
+
+            <TextView
+                android:id="@+id/UserMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Message"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:fontFamily="@font/questrial"
+                android:layout_marginTop="10sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="30sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginBottom="30sp"
+                android:id="@+id/ActionButtonOnMatch"
+                >
+
+                <Button
+                    android:id="@+id/declineMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Decline"
+                    android:background="@color/brightRed"
+                    android:layout_marginRight="5sp"
+                    android:layout_marginEnd="5sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/questrial"
+                    android:textSize="17sp"/>
+
+                <Button
+                    android:id="@+id/acceptMatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Accept"
+                    android:background="@color/brownGreen"
+                    android:layout_marginStart="5sp"
+                    android:layout_marginLeft="5sp"
+                    android:fontFamily="@font/questrial"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

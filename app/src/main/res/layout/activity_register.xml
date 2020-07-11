@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.minzint.a4queue.registerActivity"
+    android:verticalScrollbarPosition="right"
+    android:id="@+id/registerPage"
+    android:background="@drawable/blackback"
+    android:orientation="vertical">
+
+ <!--   <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_weight="1.00"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:padding="15sp"
+        />
+-->
+    <TextView
+        android:id="@+id/RegisterText"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.00"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Create Account"
+        android:paddingLeft="20sp"
+
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+
+        />
+
+    <EditText
+        android:id="@+id/nameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.00"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/FirstNameLink"
+        android:textColorHint="@color/white"
+        android:paddingLeft="20sp"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="gravity"
+
+        />
+
+   <EditText
+       android:id="@+id/UserNameRegister"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_weight="1.00"
+       android:ems="10"
+       android:inputType="textPersonName"
+       android:hint="@string/UserName"
+       android:textColorHint="@color/white"
+       android:paddingLeft="20sp"
+
+       android:textColor="@color/white"
+       android:textSize="16sp"
+       android:textAlignment="gravity"
+
+       />
+
+    <EditText
+        android:id="@+id/UserEmailAddressRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/EmailAddress_registerPage"
+        android:textColorHint="@color/white"
+        android:paddingLeft="20sp"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="gravity"
+
+        />
+
+    <EditText
+        android:id="@+id/UserPasswordRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/password_registerPage"
+        android:textColorHint="@color/white"
+        android:paddingLeft="20sp"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="gravity"
+
+        />
+
+    <EditText
+        android:id="@+id/UserPasswordRegisterRetype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.00"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/RetypePasswordLink"
+        android:textColorHint="@color/white"
+        android:paddingLeft="20sp"
+
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="gravity"
+        />
+
+    <Button
+        android:id="@+id/CreateAccountButton"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:text="@string/createAccountButton_registerPage"
+        android:background="@color/yellow"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textAlignment="gravity"
+        android:layout_marginRight="30sp"
+        android:layout_marginEnd="30sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginStart="30sp"
+        android:textColorHint="@color/white"
+        android:layout_marginTop="15sp"
+        />
+
+</LinearLayout>

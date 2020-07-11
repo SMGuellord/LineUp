@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".user_give_details"
+    tools:openDrawer="start">
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+    <!--End Drawer Menu-->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_give_details"
+    android:background="@drawable/blackback">
+
+    <!--Start Drawer Menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/Gray"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20sp"
+            android:background="@color/white"
+
+            >
+
+            <TextView
+                android:id="@+id/TitleMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/specify_details"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:paddingTop="80sp"
+                android:textColor="@color/black"
+                app:fontFamily="@font/electrolize"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/TitleTimeMatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/TitleTimeMatchString"
+                    android:paddingTop="30sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginLeft="20sp"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    app:fontFamily="@font/questrial"
+                    />
+
+                <EditText
+                    android:id="@+id/EditTimeMatchs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="time"
+                    android:textColor="@color/black"
+                    android:hint="@string/enter_time"
+                    android:textSize="17sp"
+                    android:textColorHint="@color/black"
+                    app:fontFamily="@font/questrial"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ErrorTimeTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter a correct time value"
+                android:visibility="invisible"
+                android:textSize="17sp"
+                android:textColorHint="@color/black"
+                app:fontFamily="@font/questrial"
+                android:textColor="@color/brightRed"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginTop="8sp"/>
+
+            <TextView
+                android:id="@+id/TitleFeeMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TitleFeeMatchString"
+                android:paddingTop="30sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:fontFamily="@font/questrial"
+                />
+
+            <CheckBox
+                android:id="@+id/checkboxmin"
+                style="@android:style/Widget.Holo.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginStart="20sp"
+                android:text="@string/TitleFeeMin"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:onClick="onCheckboxClicked"
+                app:fontFamily="@font/questrial"
+                />
+
+            <CheckBox
+                android:id="@+id/checkboxave"
+                style="@android:style/Widget.Holo.Light.CompoundButton.CheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginStart="20sp"
+                android:text="@string/r100_hr"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:onClick="onCheckboxClicked"
+                app:fontFamily="@font/questrial"/>
+
+            <CheckBox
+                android:id="@+id/checkboxmax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/TitleFeeMax"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:onClick="onCheckboxClicked"
+                app:fontFamily="@font/questrial"
+                />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:paddingTop="30sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:fontFamily="@font/questrial"
+                />
+
+
+            <EditText
+                android:id="@+id/AMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:textSize="17sp"
+                android:paddingBottom="15sp"
+                android:textColor="@color/black"
+                android:layout_marginStart="20sp"
+                android:layout_marginLeft="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginRight="20sp"
+                android:text="@string/hello"
+                app:fontFamily="@font/questrial"/>
+
+            <Button
+                android:id="@+id/confirmMatch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/match"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginTop="40sp"
+                android:background="@color/brownGreen"
+                android:textColor="@color/white"
+                android:layout_marginBottom="30sp"
+                app:fontFamily="@font/questrial"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="45dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/bottom_sheet_Text"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="20dp"
+        android:paddingTop="10dp"
+        app:fontFamily="@font/questrial"
+        android:text="@string/expend"
+        android:textColor="@color/Gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@color/transparent_green"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/AutoMatch"
+            android:layout_width="300dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="1"
+            android:background="@color/brownGreen"
+            android:text="@string/AutoMatch"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            app:fontFamily="@font/questrial"/>
+
+        <ImageView
+            android:id="@+id/infoLinkAutoMatch"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/infomation"
+            android:layout_marginLeft="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginEnd="20sp"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:contentDescription="@string/AutoMatch"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/matchUser"
+            android:layout_width="300dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="1"
+            android:background="@color/brownGreen"
+            android:text="@string/FindUser"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            app:fontFamily="@font/questrial"
+            />
+
+        <ImageView
+            android:id="@+id/infoLinkMatchUser"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginEnd="20sp"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            app:srcCompat="@drawable/infomation"
+            android:contentDescription="@string/AutoMatch"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/place_picker"
+            android:layout_width="300dp"
+            android:layout_height="34dp"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20sp"
+            android:layout_marginStart="20sp"
+            android:background="@color/brownGreen"
+            android:text="@string/NewLocationSelect"
+            android:textColor="@color/white"
+            app:fontFamily="@font/questrial"/>
+
+        <ImageView
+            android:id="@+id/infoLinkLocation"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:srcCompat="@drawable/infomation"
+            android:layout_marginLeft="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginEnd="20sp"
+            android:paddingTop="5sp"
+            android:paddingBottom="5sp"
+            android:contentDescription="@string/AutoMatch"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
